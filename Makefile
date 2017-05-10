@@ -22,13 +22,13 @@ all: $(TARGETS)
 $(HOME)/%:
 	ln -s $(HOME)/configs/$(@F) $@
 
+# Creates a \n that can be used in the foreach
+define \n
+
+
+endef
+
+.PHONY: clean
 clean:
-	test -L ~/.bash_profile && rm ~/.bash_profile
-	test -L ~/.bashrc && rm ~/.bashrc
-	test -L ~/.bashrc.$(UNAME) && rm ~/.bashrc.$(UNAME)
-	test -L ~/.git-prompt.sh && rm ~/.git-prompt.sh
-	test -L ~/.gitconfig && rm ~/.gitconfig
-	test -L ~/.vim && rm ~/.vim
-	test -L ~/.vimrc && rm ~/.vimrc
-	test -L ~/.xmodmap && rm ~/.xmodmap || true
-	test -L ~/.xsession && rm ~/.xsession || true
+	# The || true catches a case where make would return an error if a file wasn't found
+	$(foreach TARGET, $(TARGETS), (test -L $(TARGET) && rm $(TARGET)) || true;${\n})
