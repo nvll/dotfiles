@@ -31,4 +31,4 @@ clean:
 	test -L ~/.vim && rm ~/.vim
 	test -L ~/.vimrc && rm ~/.vimrc
 	test -L ~/.xmodmap && rm ~/.xmodmap || true
-	test -L ~/.xsession && rm ~/.xession || true
+	test -L ~/.xsession && rm ~/.xsession || true
