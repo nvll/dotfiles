@@ -1,0 +1,15 @@
+[user]
+        name = Christopher Anderson
+        email = chris@nullcode.org
+[alias]
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+[push]
+        default = simple
+[core]
+        editor = vim
+[color]
+        ui = true
+[color "diff"]
+        meta = blue black bold
+[merge]
+        tool = meld
