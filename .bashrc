@@ -3,14 +3,14 @@
 Color_Off='\e[0m'       # Text Reset
 
 # High Intensty
-Black='\e[0;90m'       # Black
-Red='\e[0;91m'         # Red
-Green='\e[0;92m'       # Green
-Yellow='\e[0;93m'      # Yellow
-Blue='\e[0;94m'        # Blue
-Purple='\e[0;95m'      # Purple
-Cyan='\e[0;96m'        # Cyan
-White='\e[0;97m'       # White
+Black='\e[0;90m\]'       # Black
+Red='\e[0;91m\]'         # Red
+Green='\e[0;92m\]'       # Green
+Yellow='\e[0;93m\]'      # Yellow
+Blue='\e[0;94m\]'        # Blue
+Purple='\e[0;95m\]'      # Purple
+Cyan='\e[0;96m\]'        # Cyan
+White='\e[0;97m\]'       # White
 
 export EDITOR='vim'
 
@@ -22,11 +22,15 @@ export TERM=xterm-color
 shopt -s cmdhist
 shopt -s histappend
 
+if [[ ~/.git-prompt.sh ]]; then
+    source ~/.git-prompt.sh
+fi
+
 if [ -d ~/usr/ ]; then
     export PATH=$HOME/usr/bin:$HOME/usr/local/bin:$PATH
 fi
 
-if [[ `uname` eq 'Darwin' ]]; then
+if [[ $(uname) == 'Darwin' ]]; then
     export PATH=$HOME/usr/local/homebrew/bin:$PATH
 fi
 
@@ -41,7 +45,7 @@ elif [ `uname` == 'Linux' ]; then
     alias ls='ls --color=auto'
 fi
 
-export PS1="\[\e[0;92m\]\u@\h \[\e[0;94m\]\w \[\e[0;95m\]\[\e[0m\]\$ "
+export PS1="$Green\u@\h $Blue\w$Purple$(__git_ps1)$White \$$Color_off "
 
 # Keep PATH when using sudo
 alias sudo="sudo env PATH=$PATH"

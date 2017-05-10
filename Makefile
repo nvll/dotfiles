@@ -2,6 +2,7 @@ CONFIGS := \
 	.bash_profile \
 	.bashrc \
 	.gitconfig \
+	.git-prompt.sh \
 	.vim \
 	.vimrc \
 
