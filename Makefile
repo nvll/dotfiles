@@ -6,8 +6,12 @@ CONFIGS := \
 	.vim \
 	.vimrc \
 
-all:
-	$(foreach conf, $(CONFIGS), ln -s $(HOME)/configs/$(conf) $(HOME)/$(conf);)
+TARGETS = $(addprefix $(HOME)/, $(CONFIGS))
 
-clean:
-	$(foreach conf, $(CONFIGS), rm -f $(HOME)/$(conf);)
+all: $(TARGETS)
+
+$(HOME)/%:
+	ln -s $(HOME)/configs/$(@F) $@
+
+clean: 
+	rm -f $(TARGETS)
