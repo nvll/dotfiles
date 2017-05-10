@@ -9,6 +9,12 @@ CONFIGS := \
 	.vim \
 	.vimrc \
 
+ifeq ($(UNAME),Linux)
+	CONFIGS += \
+		.xmodmap \
+		.xsession
+endif
+
 TARGETS = $(addprefix $(HOME)/, $(CONFIGS))
 
 all: $(TARGETS)

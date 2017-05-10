@@ -9,6 +9,8 @@ xset -b
 # Background color
 xsetroot -solid "#333333"
 
+xmodmap .xmodmap
+
 # network applet
 nm-applet&
 
