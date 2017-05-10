@@ -1,0 +1,2 @@
+export PATH=$HOME/usr/local/homebrew/bin:$PATH
+alias ls='ls -G'

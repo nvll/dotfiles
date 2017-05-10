@@ -20,25 +20,33 @@ export TERM=xterm-color
 shopt -s cmdhist
 shopt -s histappend
 
-if [[ -f ~/.git-prompt.sh ]]; then
-    source ~/.git-prompt.sh
+# Local binaries built will be in ~/usr
+if [[ -d ~/usr/bin ]]; then
+    export PATH=~/usr/bin:$PATH
 fi
 
-if [ -d ~/usr/ ]; then
-    export PATH=$HOME/usr/bin:$HOME/usr/local/bin:$PATH
+if [[ -d ~/usr/local/bin ]]; then
+    export PATH=~/usr/local/bin:$PATH
 fi
 
-alias sudo="sudo env PATH=$PATH"
-if [[ $(uname) == 'Darwin' ]]; then
-    export PATH=$HOME/usr/local/homebrew/bin:$PATH
-    alias ls='ls -G'
-elif [[ $(uname) == 'Linux' ]]; then
-    alias ls='ls --color=auto'
+# Source a platform specific bashrc
+if [[ -f .bashrc.$(uname) ]]; then
+    source .bashrc.$(uname)
+fi
+
+# IF the local system has bashrc changes include them
+if [[ -f .bashrc.local ]]; then
+    source .bashrc.local
 fi
 
 # Convenient way to view $PATH
 function path () {
     echo $PATH | tr : '\n'
 }
+
+# For __git_ps1
+if [[ -f ~/.git-prompt.sh ]]; then
+    source ~/.git-prompt.sh
+fi
 
 export PS1="\[$Green\]\u@\h \[$Blue\]\w\[$Purple\]\$(__git_ps1)\[$White\] $ "

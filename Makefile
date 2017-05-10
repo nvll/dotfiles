@@ -1,8 +1,11 @@
+UNAME := $(shell uname)
+
 CONFIGS := \
 	.bash_profile \
 	.bashrc \
-	.gitconfig \
+	.bashrc.$(UNAME) \
 	.git-prompt.sh \
+	.gitconfig \
 	.vim \
 	.vimrc \
 
@@ -13,5 +16,5 @@ all: $(TARGETS)
 $(HOME)/%:
 	ln -s $(HOME)/configs/$(@F) $@
 
-clean: 
+clean:
 	rm -f $(TARGETS)
