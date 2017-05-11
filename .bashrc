@@ -50,4 +50,4 @@ if [[ -f ~/.git-prompt.sh ]]; then
     source ~/.git-prompt.sh
 fi
 
-export PS1="\[$Green\]\u@\h \[$Blue\]\w\[$Purple\]\$(__git_ps1)\[$White\] $ "
+export PS1="\[$Green\]\u@\h \[$Blue\]\w\[$Yellow\]\$(__git_ps1)\[$White\] $ "
