@@ -14,4 +14,4 @@
 [color "diff"]
     meta = blue black bold
 [merge]
-    tool = meld
+    tool = kdiff3
