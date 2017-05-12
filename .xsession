@@ -6,8 +6,8 @@ export DESKTOP_SESSION=gnome
 # Disable audible bell
 xset -b
 
-# Background color
-xsetroot -solid "#333333"
+# set wallpaper if one exists
+nitrogen --set-scaled .wallpaper || true
 
 xmodmap .xmodmap
 
