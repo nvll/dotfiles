@@ -31,6 +31,7 @@ nmap <silent> <C-Up> :wincmd k<CR>:wincmd _<CR>
 nmap <silent> <C-Down> :wincmd j<CR>:wincmd _<CR>
 nmap <silent> <C-Right> :wincmd l<CR>
 nmap <silent> <C-Left> :wincmd h<CR>
+nmap <silent> m :Make<CR>
 
 " Tagbar Configuration
 let g:tagbar_left = 1
@@ -107,4 +108,8 @@ endif
 
 if ext == "cpp"
     setlocal makeprg=g++\ -Wall\ -std=c++14\ -o\ %<\ %
+endif
+
+if expand("%:p:h:t") == "magenta"
+    execute "setlocal makeprg=".getcwd()."/scripts/build-magenta-x86-64"
 endif
