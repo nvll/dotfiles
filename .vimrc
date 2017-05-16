@@ -99,3 +99,12 @@ colorscheme beekai
 " colorscheme dusk " Similar to desertedoceanburn, but easier on eyes
 filetype plugin indent on
 syntax on
+
+let ext = expand("%:e")
+if ext == "c"
+    setlocal makeprg=gcc\ -Wall\ -std=c11\ -o\ %<\ %
+endif
+
+if ext == "cpp"
+    setlocal makeprg=g++\ -Wall\ -std=c++14\ -o\ %<\ %
+endif
