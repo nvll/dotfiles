@@ -9,7 +9,7 @@ xset -b
 # set wallpaper if one exists
 nitrogen --set-scaled .wallpaper || true
 
-xmodmap .xmodmap
+xmodmap .Xmodmap
 
 # network applet
 nm-applet&
