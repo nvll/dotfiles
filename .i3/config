@@ -24,7 +24,7 @@ font pango:DejaVu Sans Mono 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -153,9 +153,9 @@ bar {
 for_window [title="QEMU"] floating enable
 
 # Browser pop-ups float
-for_window [window_role="pop-up"] floating enable
-
+#for_window [window_role="pop-up"] floating enable
 
 # Custom keybidns
 bindsym $mod+d exec dmenu_run
-bindsym $mod+ctrl+l exec "i3lock -d"
+bindsym $mod+ctrl+l exec "i3lock -n -c 000000"
+bindsym $mod+ctrl+s exec "shutter -s -e"

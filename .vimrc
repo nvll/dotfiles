@@ -32,6 +32,8 @@ nmap <silent> <C-Down> :wincmd j<CR>:wincmd _<CR>
 nmap <silent> <C-Right> :wincmd l<CR>
 nmap <silent> <C-Left> :wincmd h<CR>
 nmap <silent> m :Make<CR>
+nmap <silent> , :ccl<CR>
+vmap <C-M> <ESC> :let twbkp=&tw<CR> :set tw=80<CR>gvgq:let &tw=twbkp<CR>
 
 " Tagbar Configuration
 let g:tagbar_left = 1
@@ -40,8 +42,10 @@ let g:tagbar_width = 30
 let g:tagbar_foldlevel = 99 " This doesn't seem to work
 let g:tagbar_singleclick = 1
 
-let g:NERDSpaceDelims = 1
-let g:NERDCommentEmptyLines = 1
+let g:NERDCommentEmptyLines = 0
+let g:NERDAltDelims_c = 1
+let g:NERDAltDelims_cpp = 0
+let g:NERDSpaceDelims = 0
 let g:NERDTrimTrailingWhitespace = 1
 
 
@@ -65,6 +69,11 @@ set wig+=*.d
 set wig+=*~
 set wig+=cscope.out
 set wig+=tags
+
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 " Some systems may not have the directories ready so create them
 func! MkVimDirs()
@@ -110,6 +119,7 @@ if ext == "cpp"
     setlocal makeprg=g++\ -Wall\ -std=c++14\ -o\ %<\ %
 endif
 
-if expand("%:p:h:t") == "magenta"
-    execute "setlocal makeprg=".getcwd()."/scripts/build-magenta-x86-64"
+" Use the magenta build script for common builds while doing kernel work
+if expand("%:p:h:t") == "zircon"
+    execute "setlocal makeprg=".getcwd()."/scripts/build-zircon-x86-64"
 endif
