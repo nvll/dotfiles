@@ -103,7 +103,7 @@ set guioptions=acLrbem
 set guifont=Droid\ Sans\ Mono\ 8
 set t_Co=256
 set background=dark
-colorscheme beekai
+colorscheme lucid
 " colorscheme desertedoceanburn " good blue contrast, dark backgrond
 " colorscheme dull " Good light theme, higher contrast than delphi
 " colorscheme dusk " Similar to desertedoceanburn, but easier on eyes

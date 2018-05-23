@@ -157,5 +157,6 @@ for_window [title="QEMU"] floating enable
 
 # Custom keybidns
 bindsym $mod+d exec dmenu_run
-bindsym $mod+ctrl+l exec "i3lock -n -c 000000"
+#bindsym $mod+ctrl+l exec "i3lock -n -c 000000"
+bindsym $mod+ctrl+l exec "xsecurelock"
 bindsym $mod+ctrl+s exec "shutter -s -e"
