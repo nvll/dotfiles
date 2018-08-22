@@ -1,17 +1,34 @@
 [user]
-    name = Christopher Anderson
-    email = chris@nullcode.org
+name = Christopher Anderson
+email = chris@nullcode.org
+
 [alias]
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>%Creset' --abbrev-commit
-    ls = log --stat
-    wip = commit -a -m 'wip' --edit
+lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>%Creset' --abbrev-commit
+ls = log --stat
+wip = commit -a -m 'wip' --edit
+
 [push]
-    default = simple
+default = simple
+
 [core]
-    editor = vim
+editor = vim
+
 [color]
-    ui = true
+ui = true
+diff = true
+
 [color "diff"]
-    meta = blue black bold
+meta = blue black bold
+
 [merge]
-    tool = kdiff3
+tool = kdiff3
+
+[http]
+cookiefile = /usr/local/google/home/cja/.gitcookies
+
+[format]
+pretty = %C(Yellow)%h %Cblue%ar%x09%Cgreen%aN%Creset%x09%s %C(yellow)%d%Creset
+
+[include]
+# Allow overrides of things like [user] at work
+path = "~/.gitconfig.local"
