@@ -5,17 +5,13 @@ export DESKTOP_SESSION=gnome
 
 # Disable audible bell
 xset -b
-
-# set wallpaper if one exists
-nitrogen --set-scaled .wallpaper || true
-
 xmodmap .Xmodmap
+# set wallpaper if one exists
 
-# network applet
-nm-applet&
+xrandr --output DVI-I-1 --right-of DP-3 --rotate left --auto
+xrandr --output DP-3 --auto --primary
+nitrogen --set-scaled .wallpaper || xsetroot -gray
 
-# volume!
-volumeicon&
 
 # WM
-i3
+exec i3
