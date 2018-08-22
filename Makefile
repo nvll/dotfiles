@@ -47,7 +47,7 @@ all: $(TARGETS) nvim
 
 # This pipulates $(TARGETS) with the destination paths for everything in $(CONFIGS)
 $(HOME)/%:
-	ln -s $(HOME)/configs/$(@F) $@
+	ln -s $(HOME)/dotfiles/$(@F) $@
 
 nvim:
 	mkdir -p $(HOME)/.config

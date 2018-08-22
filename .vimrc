@@ -1,3 +1,3 @@
-so $HOME/configs/plugins.vim
-so $HOME/configs/keybinds.vim
-so $HOME/configs/settings.vim
+so $HOME/dotfiles/plugins.vim
+so $HOME/dotfiles/keybinds.vim
+so $HOME/dotfiles/settings.vim
