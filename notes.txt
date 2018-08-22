@@ -1,0 +1,4 @@
+- vim plugins are installed with :PlugInstall after lauching vim
+- YCM needs to be built in .vim/plugin_cache/YouCompleteMe/ by running install.py with language args
+- compiledb is easiest way to build the database for YCM by using compiledeb -n $MAKECMD for a
+  dry-run. Installing it through pip is painless (pip3 if homebrew).
