@@ -24,6 +24,13 @@ let g:NERDChristmasTree = 0
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeMouseMode = 2
 
+""" CScope
+set csto=1
+set cscopeverbose!
+if filereadable("cscope.out")
+    cs add cscope.out
+endif
+
 """ CTRL-P
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_open_new_file = 'h'
