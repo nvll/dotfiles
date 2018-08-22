@@ -10,7 +10,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-scripts/cscope.vim'
 call plug#end()
 
 """ Tagbar
