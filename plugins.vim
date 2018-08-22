@@ -26,7 +26,6 @@ let g:NERDTreeMouseMode = 2
 
 """ CScope
 set csto=1
-set cscopeverbose!
 if filereadable("cscope.out")
     cs add cscope.out
 endif
