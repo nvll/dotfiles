@@ -8,7 +8,7 @@ CONFIGS := \
 	.gitconfig \
 	.i3 \
 	.vim \
-	.vimrc \
+	.vimrc
 
 ifeq ($(UNAME),Linux)
 	CONFIGS += \
@@ -17,7 +17,7 @@ ifeq ($(UNAME),Linux)
 		.Xresources
 endif
 
-PACKAGES := \
+DEBIAN_PACKAGES := \
 	build-essential \
 	i3 \
 	i3status \
@@ -29,6 +29,16 @@ PACKAGES := \
 	tig \
 	vim \
 	xsecurelock
+
+OSX_PACKAGES := \
+	cscope \
+	ctags \
+	libusb \
+	neovim \
+	the_silver_searcher \
+	tmux \
+	vim \
+	wget
 
 TARGETS = $(addprefix $(HOME)/, $(CONFIGS))
 
@@ -42,10 +52,17 @@ nvim:
 	mkdir -p $(HOME)/.config
 	ln -s $(HOME)/.vim $(HOME)/.config/nvim
 
-linux:
-	sudo apt-get install $(PACKAGES) -y
+debian:
+	sudo apt-get install $(DEBIAN_PACKAGES) -y
 	pip -q install neovim
 	pip3 -q install neovim
+
+osx:
+	mkdir -p $(HOME)/usr/local/
+	curl -fsSL https://github.com/Homebrew/brew/tarball/master > /tmp/homebrew.tar && \
+	tar xf /tmp/homebrew.tar
+	mv Homebrew-* $(HOME)/usr/local/homebrew
+	$(HOME)/usr/local/homebrew/bin/brew install $(OSX_PACKAGES)
 
 # Creates a \n that can be used in the foreach
 define \n
@@ -63,4 +80,4 @@ clean:
 spotless: clean
 	pip -q uninstall neovim || true
 	pip3 -q uninstall neovim || true
-	sudo apt-get remove $(PACKAGES)
+	sudo apt-get remove $(DEBIAN_PACKAGES)
