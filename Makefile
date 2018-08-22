@@ -35,6 +35,7 @@ OSX_PACKAGES := \
 	ctags \
 	libusb \
 	neovim \
+	neovim \
 	the_silver_searcher \
 	tmux \
 	vim \
@@ -57,11 +58,13 @@ debian:
 	pip -q install neovim
 	pip3 -q install neovim
 
-osx:
+brew:
 	mkdir -p $(HOME)/usr/local/
 	curl -fsSL https://github.com/Homebrew/brew/tarball/master > /tmp/homebrew.tar && \
 	tar xf /tmp/homebrew.tar
 	mv Homebrew-* $(HOME)/usr/local/homebrew
+
+brew-install:
 	$(HOME)/usr/local/homebrew/bin/brew install $(OSX_PACKAGES)
 
 # Creates a \n that can be used in the foreach
