@@ -49,3 +49,25 @@ endif
 
 """ Airline
 let g:airline_theme = 'wombat'
+
+""" YouCompleteMe
+function! s:CustomizeYcmLocationWindow()
+  " Move the window to the top of the screen.
+  wincmd K
+  " Set the window height to 5.
+  5wincmd _
+  " Switch back to working window.
+  wincmd p
+endfunction
+
+autocmd User YcmLocationOpened call s:CustomizeYcmLocationWindow()
+
+function! s:CustomizeYcmQuickFixWindow()
+  " Move the window to the top of the screen.
+  wincmd K
+  " Set the window height to 5.
+  5wincmd _
+endfunction
+
+autocmd User YcmQuickFixOpened call s:CustomizeYcmQuickFixWindow()
+map <Leader>f :YcmCompleter FixIt<CR>
