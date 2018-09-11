@@ -51,6 +51,8 @@ endif
 let g:airline_theme = 'wombat'
 
 """ YouCompleteMe
+" Disable the completion pop-up. Use YCM for errors / fixes
+let g:ycm_auto_trigger = 0
 function! s:CustomizeYcmLocationWindow()
   " Move the window to the top of the screen.
   wincmd K
