@@ -24,7 +24,7 @@ meta = blue black bold
 tool = kdiff3
 
 [http]
-cookiefile = /usr/local/google/home/cja/.gitcookies
+	cookiefile = /Users/cja/.gitcookies
 
 [format]
 pretty = %C(Yellow)%h %Cblue%ar%x09%Cgreen%aN%Creset%x09%s %C(yellow)%d%Creset
