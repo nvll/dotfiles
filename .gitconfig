@@ -6,6 +6,8 @@ email = chris@nullcode.org
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>%Creset' --abbrev-commit
 ls = log --stat
 wip = commit -a -m 'wip' --edit
+undo = reset HEAD~1 --mixed
+amend = commit --amend
 
 [push]
 default = simple
