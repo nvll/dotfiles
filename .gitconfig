@@ -3,11 +3,14 @@ name = Christopher Anderson
 email = chris@nullcode.org
 
 [alias]
-lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>%Creset' --abbrev-commit
+lg = log --color --graph --pretty=full
 ls = log --stat
+rbi = rebase -i --autosquash
+rbc = rebase --continue
 wip = commit -a -m 'wip' --edit
 undo = reset HEAD~1 --mixed
 amend = commit --amend
+foreach = "!f() { git rebase -x \"git log --format=short -1 && ${*:1}\"; }; f"
 
 [push]
 default = simple
