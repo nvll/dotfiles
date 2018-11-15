@@ -34,3 +34,5 @@ colo seoul256
 set background=dark
 filetype plugin indent on
 syntax on
+
+let &colorcolumn=join(range(101,256),",")
