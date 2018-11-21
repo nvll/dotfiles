@@ -73,3 +73,7 @@ endfunction
 
 autocmd User YcmQuickFixOpened call s:CustomizeYcmQuickFixWindow()
 map <Leader>f :YcmCompleter FixIt<CR>
+
+""" Vim Commentary
+" Make C++ use // instead of /* */
+autocmd FileType cpp setlocal commentstring=//\ %s
