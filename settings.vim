@@ -24,6 +24,24 @@ set wig+=*.d
 set wig+=*~
 set wig+=cscope.out
 set wig+=tags
+
+let $backupdir=$HOME . "/.vim/cache/backup/"
+let $swapdir=$HOME . "/.vim/cache/swap/"
+" Some systems may not have the directories ready so create them
+func! MkVimDirs()
+    if !isdirectory($backupdir)
+        call mkdir($backupdir, "p", 0700)
+    endif
+    if !isdirectory($swapdir)
+        call mkdir($swapdir, "p", 0700)
+    endif
+endfunction
+
+au VimEnter * call MkVimDirs()
+
+" Keep backup files, but store them in ~/.vim/cache
+set backupdir=$backupdir
+set directory=$swapdir
 set backupcopy=auto
 set writebackup
 set backup
