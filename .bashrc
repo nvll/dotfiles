@@ -20,6 +20,7 @@ export HISTTIMEFORMAT="%F %T "
 export TERM=xterm-color
 shopt -s cmdhist
 shopt -s histappend
+shopt -s globstar
 
 # Local binaries built will be in ~/usr
 if [[ -d ~/usr/bin ]]; then
