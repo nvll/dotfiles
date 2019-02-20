@@ -13,6 +13,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/a.vim'
 call plug#end()
 
 """ Tagbar

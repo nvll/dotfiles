@@ -17,6 +17,7 @@ set mouse=a
 set splitright
 set splitbelow
 set laststatus=2
+set ttymouse=sgr
 set wig+=build-*
 set wig+=.git
 set wig+=*.o
