@@ -3,7 +3,7 @@ name = Christopher Anderson
 email = chris@nullcode.org
 
 [alias]
-lg = log --color --graph --pretty=full
+lg = log --color --pretty=full --stat
 ls = log --stat
 rbi = rebase -i --autosquash
 rbc = rebase --continue

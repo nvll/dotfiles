@@ -159,7 +159,7 @@ for_window [title="QEMU"] floating enable
 #bindsym $mod+d exec dmenu_run
 #bindsym $mod+ctrl+l exec "i3lock -n -c 000000"
 bindsym $mod+ctrl+l exec "xsecurelock"
-bindsym $mod+ctrl+s exec "shutter -s -e"
+bindsym $mod+shift+s exec "gnome-screenshot -a -c"
 
 # Launch supporting tools
 exec --no-startup-id nm-applet

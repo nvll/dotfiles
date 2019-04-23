@@ -47,6 +47,16 @@ set backupcopy=auto
 set writebackup
 set backup
 
+" Gui config
+set guifont=DejaVu\ Sans\ Mono\ 8
+set guioptions -=m " remove menubar
+set guioptions -=T " remove toolbar
+set guioptions -=r " remove right scrollbar
+set guioptions -=R " remove right scrollbar
+set guioptions -=l " remove left scrollbar
+set guioptions -=L " remove left scrollbar
+set guioptions +=c " console dialog options
+
 " Colors / syntax
 let g:seoul256_background = 234
 colo seoul256

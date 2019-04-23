@@ -11,8 +11,8 @@ map <C-G>l :Glog<CR>
 map <Leader>[ :ts<CR>
 
 " Move between window frames with CTRL+Direction
-nmap <silent> <C-Up> :wincmd k<CR>:wincmd _<CR>
-nmap <silent> <C-Down> :wincmd j<CR>:wincmd _<CR>
+nmap <silent> <C-Up> :wincmd k<CR>
+nmap <silent> <C-Down> :wincmd j<CR>
 nmap <silent> <C-Right> :wincmd l<CR>
 nmap <silent> <C-Left> :wincmd h<CR>
 
