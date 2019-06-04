@@ -52,3 +52,7 @@ if [[ -f ~/.git-prompt.sh ]]; then
 fi
 
 export PS1="\[$Green\]\u@\h \[$Blue\]\w\[$Yellow\]\$(__git_ps1)\[$White\] $ "
+
+if [[ -d "$HOME/.cargo/bin" ]]; then
+    export PATH="$HOME/.cargo/bin/:$PATH"
+fi

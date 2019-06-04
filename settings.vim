@@ -66,3 +66,8 @@ syntax on
 
 " Change the background color after 100 columns
 let &colorcolumn=join(range(101,256),",")
+
+if $FUCHSIA_DIR != ""
+  source $FUCHSIA_DIR/scripts/vim/fuchsia.vim
+endif
+filetype plugin indent on
