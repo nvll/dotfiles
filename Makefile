@@ -21,13 +21,14 @@ DEBIAN_PACKAGES := \
 	build-essential \
 	i3 \
 	i3status \
-	neovim \
 	nitrogen \
 	python3-pip \
 	silversearcher-ag \
 	suckless-tools \
 	tig \
+	tmux \
 	vim \
+	vim-gtk \
 	xsecurelock
 
 OSX_PACKAGES := \
@@ -55,8 +56,6 @@ nvim:
 
 debian:
 	sudo apt-get install $(DEBIAN_PACKAGES) -y
-	pip -q install neovim
-	pip3 -q install neovim
 
 brew:
 	mkdir -p $(HOME)/usr/local/
