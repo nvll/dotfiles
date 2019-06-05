@@ -31,6 +31,10 @@ if [[ -d ~/usr/local/bin ]]; then
     export PATH=~/usr/local/bin:$PATH
 fi
 
+if [[ -d "$HOME/.cargo/bin" ]]; then
+    export PATH="$HOME/.cargo/bin/:$PATH"
+fi
+
 # Source a platform specific bashrc
 if [[ -f .bashrc.$(uname) ]]; then
     source .bashrc.$(uname)
@@ -53,6 +57,3 @@ fi
 
 export PS1="\[$Green\]\u@\h \[$Blue\]\w\[$Yellow\]\$(__git_ps1)\[$White\] $ "
 
-if [[ -d "$HOME/.cargo/bin" ]]; then
-    export PATH="$HOME/.cargo/bin/:$PATH"
-fi
