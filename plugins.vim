@@ -10,10 +10,12 @@ Plug 'neomake/neomake'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
-Plug 'valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/a.vim'
+if has('python')
+    Plug 'valloric/YouCompleteMe'
+endif
 call plug#end()
 
 """ Tagbar

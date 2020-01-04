@@ -1,4 +1,5 @@
 " text config. 100 col lines, 4 spaces instead of tabs
+set encoding=utf-8
 set ts=4
 set sts=4
 set sw=4
