@@ -59,8 +59,8 @@ set guioptions-=L " remove left scrollbar
 set guioptions+=c " console dialog options
 
 " Colors / syntax
-let g:seoul256_background = 234
-colo seoul256
+"let g:seoul256_background = 234
+colo nord
 set background=dark
 filetype plugin indent on
 syntax on

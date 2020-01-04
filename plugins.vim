@@ -13,6 +13,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/a.vim'
+Plug 'arcticicestudio/nord-vim'
+
 if has('python')
     Plug 'valloric/YouCompleteMe'
 endif
