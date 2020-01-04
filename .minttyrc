@@ -1,0 +1,23 @@
+Term=xterm-256color
+FontHeight=11
+Font=Consolas
+OpaqueWhenFocused=no
+CursorType=block
+
+# Argonaut converted from the RGB values in alacritty-argonaut
+Black=13,13,13
+Red=255,48,27
+Green=160,229,33
+Yellow=255,198,32
+Blue=27,166,250
+Magenta=135,99,184
+Cyan=33,222,239
+White=235,235,235
+BoldBlack=109,112,112
+BoldRed=255,67,82
+BoldGreen=184,228,102
+BoldYellow=255,215,80
+BoldBlue=27,166,250
+BoldMagenta=165,120,234
+BoldCyan=115,251,241
+BoldWhite=254,254,248
