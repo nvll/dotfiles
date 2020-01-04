@@ -1,4 +1,4 @@
-UNAME := $(shell uname)
+UNAME := $(shell uname -o)
 
 CONFIGS := \
 	.bash_profile \
@@ -45,7 +45,7 @@ OSX_PACKAGES := \
 
 TARGETS = $(addprefix $(HOME)/, $(CONFIGS))
 
-all: $(TARGETS) rust
+all: $(TARGETS)
 
 # This pipulates $(TARGETS) with the destination paths for everything in $(CONFIGS)
 $(HOME)/%:
