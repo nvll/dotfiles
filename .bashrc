@@ -2,14 +2,14 @@
 Reset='\e[0m\]'            # Text Reset
 # High Intensty
 Bold='\e[1m'
-Black='\e[0;90m'       # Black
-Red='\e[0;91m'         # Red
+Black='\e[0;30m'       # Black
+Red='\e[0;31m'         # Red
 Green='\e[0;32m'       # Green
-Yellow='\e[0;93m'      # Yellow
-Blue='\e[0;94m'        # Blue
-Purple='\e[0;95m'      # Purple
-Cyan='\e[0;96m'        # Cyan
-White='\e[0;97m'       # White
+Yellow='\e[0;33m'      # Yellow
+Blue='\e[0;34m'        # Blue
+Purple='\e[0;35m'      # Purple
+Cyan='\e[0;36m'        # Cyan
+White='\e[0;37m'       # White
 
 export EDITOR='vim'
 
