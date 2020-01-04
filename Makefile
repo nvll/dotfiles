@@ -6,12 +6,12 @@ CONFIGS := \
 	.bashrc.$(UNAME) \
 	.git-prompt.sh \
 	.gitconfig \
-	.i3 \
 	.vim \
 	.vimrc
 
 ifeq ($(UNAME),Linux)
 	CONFIGS += \
+		.i3 \
 		.Xmodmap \
 		.xsession \
 		.Xresources
