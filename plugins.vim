@@ -15,7 +15,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/a.vim'
 Plug 'arcticicestudio/nord-vim'
 
-if has('python')
+if has('python3')
     Plug 'valloric/YouCompleteMe'
 endif
 call plug#end()
