@@ -1,4 +1,4 @@
-UNAME := $(shell uname -o)
+UNAME := $(shell uname -s)
 
 CONFIGS := \
 	.bash_profile \
