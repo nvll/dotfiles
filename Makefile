@@ -43,7 +43,7 @@ all: $(TARGETS)
 $(HOME)/%:
 	ln -s $(HOME)/dotfiles/$(@F) $@
 
-debian:
+debian: rust
 	sudo apt-get install $(DEBIAN_PACKAGES) -y
 
 brew:
@@ -57,6 +57,7 @@ brew-install:
 
 rust:
 	curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path
+	cargo install ripgrep fd-find sd
 
 # Creates a \n that can be used in the foreach
 define \n
