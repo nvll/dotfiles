@@ -20,17 +20,9 @@ endif
 DEBIAN_PACKAGES := \
 	build-essential \
 	cmake \
-	i3 \
-	i3status \
-	nitrogen \
-	python3-pip \
-	silversearcher-ag \
-	suckless-tools \
 	tig \
 	tmux \
 	vim \
-	vim-gtk \
-	xsecurelock
 
 OSX_PACKAGES := \
 	cscope \
